@@ -26,7 +26,7 @@ def invoice_by_id(self, id, invoice_name='Invoice', items=[]):
     }
     self.session.post(self.base + path, data=data)
 
-def invoice_by_name(self, name='', invoice_name='Invoice', items={}):
+def invoice_by_name(self, name='', invoice_name='Invoice', items=[]):
     id = self.get_id_by_name(name=name)
     invoice_by_id(
         id,
